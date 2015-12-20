@@ -27,19 +27,4 @@ becomes .ls:
 
 It's a personal choice to use other short variable names like `$` or `dom_`. Sure enough, original tag-name functions like `div`, `a` could always be used, just we need to fill in `null` for elements without props.
 
-This approach is a time saver that helps faster flow in quick prototyping. However since React promotes component reusability, considering cross-team code readability, such time-saving syntax might not be necessarily a good fit for seriously maintained components.
-
-Another approach for easier readability that worth considering is to define some symbol as null, e.g. `__` to denote null. Then there's no need to define the helper. `_` could not be used for it means partial function application in Livescript.
-
-~~~
-__ = null
-
-getContent: ->
-  div __,
-    * a href: FlowRouter.path('/'), \Back
-      h3 __, this.data.post.title
-      p __, this.data.post.content
-~~~
-
-
-
+The above approach is a time saver that helps faster flow in quick prototyping. However since React promotes component reusability, considering cross-team code readability, such time-saving syntax might not be everyone's cup of tea.
