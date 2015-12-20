@@ -6,14 +6,12 @@
     if handle.ready!
       data.post = Posts.findOne {_id: @props._id}
     data
-  getContent: ->
-    _div do
-      * _a href: FlowRouter.path('/'), \Back
-        _h3 this.data.post.title
-        _p this.data.post.content
   render: ->
     if @data.post
-      @getContent!
+      _div do
+        * _a href: FlowRouter.path('/'), \Back
+          _h3 this.data.post.title
+          _p this.data.post.content
     else
       _div 'loading...'
 

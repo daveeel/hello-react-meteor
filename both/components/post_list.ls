@@ -8,17 +8,15 @@
     if handle.ready!
       data.posts = Posts.find({}, {sort: {_id: 1}}).fetch()
     data
-  getList: ->
-    _ul do
-      @data.posts |> map (task) ->
-        path = FlowRouter.path('post', {_id: task._id})
-        _li key:task._id,
-          _a href:path, task.title
   render: ->
     _div do
       * 'This is the post list'
         if this.data.posts
-          this.getList!
+          _ul do
+            @data.posts |> map (task) ->
+              path = FlowRouter.path('post', {_id: task._id})
+              _li key:task._id,
+                _a href:path, task.title
         else
           'loading...'
 /*

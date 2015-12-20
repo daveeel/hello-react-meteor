@@ -4,9 +4,9 @@ Learning Some React with Proper Meteor Integration (Routing, SSR)
 # Plus:
 * Use Livescript to remove the JSX hell
 * Use _ as helper of React.createElement and makes `null` optional. It could be used directly in Livescript: `_div props, children` or `_ \div, props, children`. Or in Javascript: `_div(props,children)` or `_('div',props,children)`. Inspired from: https://github.com/redbadger/react-isomorphic/issues/5
-* Now we have the full power of a powerful functional scripting language and jade-like templating truely unified.
+* Now we have the full power of a functional scripting language and jade-like templates truly unified.
 
-e.g. .jsx
+We could write .jsx
 ```jsx
   getContent() {
     return <div>
@@ -16,7 +16,7 @@ e.g. .jsx
     </div>;
   },
 ```
-becomes .ls:
+as .ls:
 ```livescript
   getContent: ->
     _div do # the following is an array of children
@@ -25,7 +25,7 @@ becomes .ls:
         _p this.data.post.content
 ```
 
-It's a personal choice to use other short variable names like `$` or `dom_`. 
+It's a personal choice to use other short variable names like `$` or `dom_`.
 
 The above approach is a time saver that helps faster flow in quick prototyping. However since React promotes component reusability, considering cross-team code readability, such time-saving syntax might not be everyone's cup of tea.
 
