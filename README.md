@@ -1,5 +1,5 @@
-# hello-react-meteor-livescript
-Learning Some React with Proper Meteor Integration (Routing, SSR)
+A fork from the source of: Learning Some React with Proper Meteor Integration (Routing, SSR)
+https://kadira.io/blog/meteor/meteor-ssr-support-using-flow-router-and-react
 
 # Plus:
 * Use Livescript to remove the JSX hell
