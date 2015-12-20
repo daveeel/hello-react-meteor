@@ -7,7 +7,7 @@ Learning Some React with Proper Meteor Integration (Routing, SSR)
 * Now we have the full power of a powerful functional scripting language and jade-like templating truely unified.
 
 e.g. .jsx
-~~~
+```jsx
   getContent() {
     return <div>
       <a href={FlowRouter.path('/')}>Back</a>
@@ -15,15 +15,15 @@ e.g. .jsx
       <p>{this.data.post.content}</p>
     </div>;
   },
-~~~
+```
 becomes .ls:
-~~~
+```livescript
   getContent: ->
     _div do # the following is an array of children
       * _a href: FlowRouter.path('/'), \Back
         _h3 this.data.post.title
         _p this.data.post.content
-~~~
+```
 
 It's a personal choice to use other short variable names like `$` or `dom_`. Sure enough, original tag-name functions like `div`, `a` could always be used, just we need to fill in `null` for elements without props.
 
