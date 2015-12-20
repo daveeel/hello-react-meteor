@@ -4,7 +4,7 @@ Learning Some React with Proper Meteor Integration (Routing, SSR)
 # Plus:
 * Use Livescript to remove the JSX hell
 * Use _ as helper of React.createElement and makes `null` optional. It could be used directly in Livescript: `_div props, children` or `_ \div, props, children`. Or in Javascript: `_div(props,children)` or `_('div',props,children)`. Inspired from: https://github.com/redbadger/react-isomorphic/issues/5
-* Now we have the full power of Livescript, and the jade like syntax suger is free.
+* Now we have the full power of a powerful functional scripting language and jade-like templating truely unified.
 
 e.g. .jsx
 ~~~
@@ -19,7 +19,7 @@ e.g. .jsx
 becomes .ls:
 ~~~
   getContent: ->
-    _div do
+    _div do # the following is an array of children
       * _a href: FlowRouter.path('/'), \Back
         _h3 this.data.post.title
         _p this.data.post.content
