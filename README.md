@@ -6,7 +6,7 @@ Learning Some React with Proper Meteor Integration (Routing, SSR)
 * Use _ as helper of React.createElement and makes `null` optional. It could be used directly in Livescript: `_div props, children` or `_ \div, props, children`. Or in Javascript: `_div(props,children)` or `_('div',props,children)`
 * Now we have the full power of Livescript, and the jade like syntax suger is free.
 
-e.g.
+e.g. .jsx
 ~~~
   getContent() {
     return <div>
@@ -16,7 +16,7 @@ e.g.
     </div>;
   },
 ~~~
-is now:
+becomes .ls:
 ~~~
   getContent: ->
     _div do
@@ -25,7 +25,7 @@ is now:
         _p this.data.post.content
 ~~~
 
-It's personal choice to use other short variable names like `$` or `dom_`. Sure enough, original tag-name functions like `div`, `a` could always be used, just we need to fill in `null` for elements without props.
+It's a personal choice to use other short variable names like `$` or `dom_`. Sure enough, original tag-name functions like `div`, `a` could always be used, just we need to fill in `null` for elements without props.
 
 This approach is a time saver that helps faster flow in quick prototyping. However since React promotes component reusability, considering cross-team code readability, such time-saving syntax might not be necessarily a good fit for seriously maintained components.
 
