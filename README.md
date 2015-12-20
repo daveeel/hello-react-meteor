@@ -29,4 +29,4 @@ It's a personal choice to use other short variable names like `$` or `dom_`.
 
 The above approach is a time saver that helps faster flow in quick prototyping. However since React promotes component reusability, considering cross-team code readability, such time-saving syntax might not be everyone's cup of tea.
 
-P.S.: Original tag-name functions like `div`, `a` could be directed used by importing them all to global namespace by: `@ <<< React.DOM` as mentioned here: http://red-badger.com/blog/2014/05/27/using-livescript-with-react/ . Just we need to fill in `null` for elements without props. But having hundreds of global functions like `a`, `br`, `div` etc... might be a bad idea.
+P.S.: Original tag-name functions like `div`, `a` could be directly used by importing them all to global namespace by: `@ <<< React.DOM` as mentioned here: http://red-badger.com/blog/2014/05/27/using-livescript-with-react/ . Just we need to fill in `null` for elements without props. But having hundreds of global functions like `a`, `br`, `div` etc... might be a bad idea.
