@@ -2,7 +2,7 @@ A fork from the source of: Learning Some React with Proper Meteor Integration (R
 https://kadira.io/blog/meteor/meteor-ssr-support-using-flow-router-and-react
 
 # Plus:
-* Use Livescript to remove the JSX hell
+* Use [Livescript](http://livescript.net "Go to livescript.net") to remove the JSX hell
 * Use _ as helper of React.createElement and makes `null` optional. It could be used directly in Livescript: `_div props, children` or `_ \div, props, children`. Or in Javascript: `_div(props,children)` or `_('div',props,children)`. Inspired from: https://github.com/redbadger/react-isomorphic/issues/5
 * Now we have the full power of a functional scripting language and jade-like templates truly unified.
 
