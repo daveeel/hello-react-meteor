@@ -1,3 +1,23 @@
+@PostPage = React.createClass do
+  mixins: [ReactMeteorData]
+  getMeteorData: ->
+    const handle = Meteor.subscribe \singlePost, @props._id
+    const data = {}
+    if handle.ready!
+      data.post = Posts.findOne {_id: @props._id}
+    data
+  getContent: ->
+    _div do
+      * _a href: FlowRouter.path('/'), \Back
+        _h3 this.data.post.title
+        _p this.data.post.content
+  render: ->
+    if @data.post
+      @getContent!
+    else
+      _div 'loading...'
+
+/*
 PostPage = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData() {
@@ -6,7 +26,7 @@ PostPage = React.createClass({
     if(handle.ready()) {
       data.post = Posts.findOne({_id: this.props._id});
     }
-    
+
     return data;
   },
   getContent() {
@@ -20,3 +40,4 @@ PostPage = React.createClass({
     return (this.data.post)? this.getContent() : <div>loading...</div>;
   }
 });
+*/
