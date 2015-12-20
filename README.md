@@ -2,7 +2,7 @@
 Learning Some React with Proper Meteor Integration (Routing, SSR)
 
 # Plus:
-* Use Livescript to replace JSX hell
+* Use Livescript to remove the JSX hell
 * Use _ as helper of React.createElement and makes `null` optional. It could be used directly like `_div props children` or `_ div props children`
 * Now we have the full power of Livescript, and the jade like syntax suger is free.
 
