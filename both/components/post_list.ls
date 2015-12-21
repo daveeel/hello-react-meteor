@@ -3,8 +3,8 @@
 @PostList = React.createClass do
   mixins: [ReactMeteorData]
   getMeteorData: ->
-    const handle = Meteor.subscribe('posts')
-    const data = {}
+    handle = Meteor.subscribe('posts')
+    data = {}
     if handle.ready!
       data.posts = Posts.find({}, {sort: {_id: 1}}).fetch()
     data

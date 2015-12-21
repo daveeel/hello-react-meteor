@@ -24,7 +24,6 @@ PostPage = React.createClass({
     if(handle.ready()) {
       data.post = Posts.findOne({_id: this.props._id});
     }
-
     return data;
   },
   getContent() {
